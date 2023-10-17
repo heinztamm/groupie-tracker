@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupie's Tracker</title>
+    <link rel="stylesheet" href="../styling/home.css" type="text/css"/>
+</head>
+<body>
+    <div>
+        {{range .}} <img src="{{.ImageURL}}" alt="{{.Name}} artwork">{{end}}
+    </div>
+</body>
+</html>
