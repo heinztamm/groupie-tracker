@@ -13,11 +13,21 @@
     <header>
         <h1 id="logo" href="">A Groupie's Tracker</h1>
      </header>
-     <div id="searchbar">
-        <input type="text" placeholder="Search..">
-     </div>
+     <form id="searchbar" method="POST">
+        <input
+        name="input"
+        type="text" 
+        placeholder="Search.." 
+        autofocus
+        /> <br/>
+        <input type="submit" hidden/>
+     </form>
     <div id="images">
-        {{range .}} <img src="{{.ImageURL}}" alt="{{.Name}} artwork">{{end}}
+      {{if .SearchData.SearchResult}}  
+      {{range .SearchData.SearchResult}} <img src="{{.ImageURL}}" alt="{{.Name}} artwork">{{end}}
+      {{else}}
+      {{range .Artists}} <img src="{{.ImageURL}}" alt="{{.Name}} artwork">{{end}}
+      {{end}}
     </div>
 </body>
 </html>
