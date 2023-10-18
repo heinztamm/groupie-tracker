@@ -1,3 +1,32 @@
 body {
     justify-content: center;
+    background-color: rgb(41, 2, 10);
+    text-align: center;
+    /* vertical-align: center; */
 }
+#logo {
+    font-family: Tourney, Verdana, Geneva, Tahoma, sans-serif;
+    color: beige;
+    font-size: 50px;
+    margin-top: 4%;
+    user-select: none;
+    margin-bottom: 4%;
+}
+#images {
+    margin-left: 4%;
+    margin-right: 4%;
+}
+img {
+    margin: 2%;
+}
+#searchbar input[type=text]{
+      padding: 6px;
+      width: 40%;
+      margin-bottom: 3%;
+}
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+/* @media screen and (max-width: 600px) {
+    .topnav input[type=text] {
+      border: 1px solid #ccc;
+    }
+  } */

@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groupie's Tracker</title>
+    <title>A Groupie's Tracker</title>
     <link rel="stylesheet" href="../styling/home.css" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
+    <header>
+        <h1 id="logo" href="">A Groupie's Tracker</h1>
+     </header>
+     <div id="searchbar">
+        <input type="text" placeholder="Search..">
+     </div>
+    <div id="images">
         {{range .}} <img src="{{.ImageURL}}" alt="{{.Name}} artwork">{{end}}
     </div>
 </body>
