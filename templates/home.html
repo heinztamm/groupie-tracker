@@ -13,21 +13,38 @@
     <header>
         <h1 id="logo" href="">A Groupie's Tracker</h1>
      </header>
-     <form id="searchbar" method="POST">
-        <input
-        name="input"
-        type="text" 
-        placeholder="Search.." 
-        autofocus
-        /> <br/>
-        <input type="submit" hidden/>
-     </form>
+     <div>
+         <form id="searchbar" method="POST">
+             <input
+             name="input"
+             type="text" 
+             placeholder="Search.." 
+             autofocus
+             /> <br/>
+             <input type="submit" hidden/>
+            </form>
+            <a href="/">
+                <button>Return Home</button>
+            </a>
+        </div>
     <div id="images">
-      {{if .SearchData.SearchResult}}  
-      {{range .SearchData.SearchResult}} <img src="{{.ImageURL}}" alt="{{.Name}} artwork">{{end}}
+      {{if .SearchData.SearchResult}}
+      {{range .SearchData.SearchResult}}
+      <div class="image_link">
+          <!-- <a href="/details/{{.Id}}"> -->
+                <img src="{{.ImageURL}}" alt="{{.Name}} artwork">
+            <!-- </a> -->
+      </div>
+            {{end}}
       {{else}}
-      {{range .Artists}} <img src="{{.ImageURL}}" alt="{{.Name}} artwork">{{end}}
-      {{end}}
+        {{range .Artists}}
+        <div class="image_link">
+            <!-- <a href="/details/{{.Id}}"> -->
+                <img src="{{.ImageURL}}" alt="{{.Name}} artwork">
+            <!-- </a> -->
+        </div>
+        {{end}}
+        {{end}}
     </div>
 </body>
 </html>

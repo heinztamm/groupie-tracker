@@ -13,24 +13,17 @@ body {
     margin-bottom: 4%;
 }
 #images {
-    margin-top: 3%;
     margin-left: 4%;
     margin-right: 4%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
-    grid-gap: 50px;
 }
 img {
-    border-radius: 30px;
+    margin: 2%;
 }
 #searchbar input[type=text]{
       padding: 6px;
       width: 40%;
       margin-bottom: 3%;
 }
-/* .image_link {
-    border-radius: 30px;
-} */
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 /* @media screen and (max-width: 600px) {
     .topnav input[type=text] {
