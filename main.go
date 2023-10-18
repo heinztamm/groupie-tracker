@@ -24,8 +24,8 @@ func main() {
 
 	// Next up, display all the artists on a homepage
 	// so, first, set up execution of a homepage
-	// fs := http.FileServer(http.Dir("./styling"))
-	// http.Handle("/styling/", http.StripPrefix("/styling", fs))
+	fs := http.FileServer(http.Dir("./styling"))
+	http.Handle("/styling/", http.StripPrefix("/styling", fs))
 	http.HandleFunc("/", handling.HandleMain)
 	PORT := ":8080"
 	linkText := "Click here to head to the website..."
@@ -44,5 +44,4 @@ func main() {
 		fmt.Printf("error starting server: %s\n", err)
 		os.Exit(1)
 	}
-
 }
